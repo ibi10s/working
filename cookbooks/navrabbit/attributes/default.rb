@@ -1,10 +1,5 @@
-
-
-# being nil, the rabbitmq defaults will be used
-#default['rabbitmq']['nodename']  = 'navnode'
-
-
-# plugins
-#default['rabbitmq']['enabled_plugins'] = []
-#default['rabbitmq']['disabled_plugins'] = []
-
+# clustering
+default['rabbitmq']['cluster'] = true
+default['rabbitmq']['cluster_disk_nodes'] = []
+default['rabbitmq']['erlang_cookie'] = 'AnyAlphaNumericStringWillDo'
+default['rabbitmq']['cluster_partition_handling'] = 'ignore'
